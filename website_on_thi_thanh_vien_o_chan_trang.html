@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ôn thi tốt nghiệp THPTQG – Toán, Văn, Anh, Lịch sử</title>
+<style>
+:root{--navy:#20344d;--blue:#245b91;--red:#8e302c;--cream:#f7f1e7;--ink:#203047;--muted:#5f6f82;--line:#dce5ef;--bg:#f5f7fa;--green:#24845d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.6 Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}header{background:var(--navy);color:#fff;padding:12px clamp(14px,3vw,38px);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.brand{font-size:1.08rem;font-weight:700}nav{display:flex;flex-wrap:wrap;gap:4px}nav a{color:white;text-decoration:none;padding:8px 10px;border-radius:7px;font-size:.92rem}nav a:hover,nav a.active{background:#ffffff25}.hero{padding:42px 18px;text-align:center;background:linear-gradient(110deg,#f2e5d0,#fffaf2 54%,#e8d5bf);border-bottom:4px solid #b99a76}.eyebrow{font-weight:bold;letter-spacing:.08em;color:var(--navy);font-size:.85rem}.hero h1{font:700 clamp(2rem,5vw,3.6rem)/1.12 Georgia,serif;color:var(--red);margin:10px 0}.hero p{font:italic 1.1rem Georgia,serif;color:#65513f;margin:10px 0 20px}.btn{display:inline-block;border:0;border-radius:8px;padding:10px 15px;background:var(--blue);color:white;text-decoration:none;font-weight:bold;cursor:pointer}.btn.red{background:var(--red)}.btn.light{background:#eaf1f8;color:var(--blue)}main{max-width:1300px;margin:20px auto;padding:0 15px;display:grid;grid-template-columns:220px minmax(0,1fr) 260px;gap:15px}.panel{background:white;border:1px solid var(--line);border-radius:11px;padding:16px;margin-bottom:14px;box-shadow:0 2px 8px #1d35570a}.side a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:7px}.side a:hover{background:#edf3fa}.side h3{margin:0 0 8px}h2{font-size:1.25rem;color:var(--blue);margin:0 0 12px}h3{font-size:1rem;margin:0 0 7px}.muted{color:var(--muted)}.check{list-style:none;padding:0}.check li{margin:5px 0}.check li:before{content:"✓";font-weight:bold;color:var(--green);margin-right:8px}.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.tile{border:1px solid var(--line);border-radius:10px;padding:13px;text-align:center;background:#fbfcfe}.tile .emoji{font-size:1.8rem}.tile h3{margin:5px 0;color:var(--blue)}.tile p{font-size:.88rem;color:var(--muted);min-height:42px}.subject-button{width:100%;border:0;border-radius:7px;padding:9px;background:var(--blue);color:white;font-weight:bold;cursor:pointer}.subject-button[data-subject="van"]{background:#8b302b}.subject-button[data-subject="anh"]{background:#24845d}.subject-button[data-subject="su"]{background:#7651a8}.subject-button[data-subject="toan"]{background:#245b91}.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.topic{border:1px solid var(--line);border-radius:9px;padding:11px;background:#fbfcfe}.topic strong{display:block;color:var(--blue)}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.controls select{padding:9px;border:1px solid #cbd5e1;border-radius:7px;background:white;color:var(--ink)}.question{padding:13px 0;border-bottom:1px solid var(--line)}.question p{font-weight:bold;margin:0 0 7px}.question label{display:block;padding:6px 8px;border-radius:7px;cursor:pointer}.question label:hover{background:#f0f5fa}.feedback{padding:9px;margin-top:7px;border-radius:7px;background:#f2f6fa}.correct{color:#23754b;font-weight:bold}.wrong{color:var(--red);font-weight:bold}.result{display:none;background:#edf6f0;padding:12px;border-radius:8px;margin-top:12px}.mind-center{background:var(--navy);color:white;text-align:center;font-weight:bold;border-radius:9px;padding:12px;margin-bottom:10px}.branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.branch{background:#f8fbff;border:2px solid #d5e1ef;border-radius:9px;padding:10px}.branch b{color:var(--blue)}.branch ul{padding-left:18px;margin:5px 0}.listline{padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}.listline:last-child{border:0}.badge{display:inline-block;background:#edf3fa;color:var(--blue);border-radius:99px;padding:2px 8px;font-size:.78rem}.quote{background:var(--cream);text-align:center;font:italic 1rem Georgia,serif}.progress{height:8px;background:#e4eaf1;border-radius:99px;overflow:hidden}.progress div{height:100%;width:0;background:var(--green)}footer{background:var(--navy);color:#fff;text-align:center;padding:22px 15px;margin-top:20px}small{font-size:.85rem}@media(max-width:1050px){main{grid-template-columns:190px minmax(0,1fr)}.right{display:none}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){main{grid-template-columns:1fr}.left{display:none}.hero{padding:30px 14px}header{justify-content:center}nav{justify-content:center}.tiles,.topic-grid,.branches{grid-template-columns:1fr}.tile p{min-height:0}}
+
+/* Bổ sung: kiến thức theo môn và nguồn tham khảo */
+.knowledge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.knowledge-card{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fbfcfe}
+.knowledge-card h3{font-size:1.05rem;color:var(--blue);margin-bottom:8px}
+.knowledge-card h4{margin:10px 0 4px;color:var(--red)}
+.knowledge-card ul{padding-left:20px;margin:5px 0}
+.knowledge-card li{margin:4px 0}
+.source-list a{color:var(--blue);overflow-wrap:anywhere}
+.source-item{padding:11px 0;border-bottom:1px solid var(--line)}
+.source-item:last-child{border-bottom:0}
+@media(max-width:720px){.knowledge-grid{grid-template-columns:1fr}}
+
+/* Giao diện đồng bộ với bộ trang ôn thi: xanh ngọc dịu, xanh biển và nền sáng */
+:root{--navy:#174a5b;--blue:#197b83;--red:#287b83;--cream:#edf7f6;--ink:#203642;--muted:#607681;--line:#d8e6e8;--bg:#f4f8f8;--green:#25866d}
+header{background:linear-gradient(100deg,#174a5b,#197b83);box-shadow:0 3px 14px #153e4a20}
+header nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:7px;font-size:.92rem}
+header nav a:hover,header nav a:focus{background:#ffffff26;outline-offset:2px}
+.hero{background:linear-gradient(120deg,#e5f4f3 0%,#f8fbfa 58%,#eaf1fa 100%);border-bottom:4px solid #48aaa7}
+.eyebrow,h2,.knowledge-card h3,.knowledge-card strong{color:#197b83}
+.hero h1{color:#174a5b}
+.btn,.subject-button{background:#197b83}
+.btn.red{background:#197b83}
+.btn.light{background:#e8f5f4;color:#174a5b}
+.tile{background:#fbfdfd}
+footer{background:#174a5b}
+
+</style>
+</head>
+<body>
+<header><div class="brand">🎓 NHÓM ÔN TẬP · WEBSITE ÔN THI</div><nav><a href="#home">Trang chủ</a><a href="#subjects">Môn học</a><a href="#materials">Tài liệu</a><a href="#mindmap">Sơ đồ tư duy</a><a href="#practice">Luyện đề</a><a href="#knowledge">Kiến thức</a><a href="#sources">Nguồn tham khảo</a><a href="#thanh-vien-sang-lap">Thành viên</a><a href="index.html">Cổng ôn tập 4 môn</a><a href="toan.html">Toán 10–12</a><a href="van.html">Ngữ văn 10–12</a><a href="anh.html">Tiếng Anh 10–12</a><a href="su.html">Lịch sử 10–12</a></nav></header>
+<section class="hero" id="home"><div class="eyebrow">CỔNG ÔN TẬP KỲ THI TỐT NGHIỆP TRUNG HỌC PHỔ THÔNG</div><h1>TOÁN • NGỮ VĂN • TIẾNG ANH • LỊCH SỬ</h1><p>Học có kế hoạch – Luyện tập đúng trọng tâm – Tự tin bứt phá</p><a href="#subjects" class="btn red">Khám phá các môn học →</a></section>
+<main>
+<aside class="left side">
+<div class="panel"><h3>📚 Danh mục chính</h3><a href="#home">⌂ Trang chủ</a><a href="#subjects">▤ Các môn ôn thi</a><a href="#materials">▣ Tài liệu ôn tập</a><a href="#mindmap">✣ Sơ đồ tư duy</a><a href="#practice">✓ Luyện trắc nghiệm</a><a href="#plan">☷ Kế hoạch học</a></div>
+<div class="panel quote"><div style="font-size:2rem">📖</div>“Kiên trì mỗi ngày, tiến bộ từng bước.”<p><small>Góc học tập</small></p></div>
+<div class="panel"><h3>📈 Tiến độ ôn tập</h3><div class="progress"><div id="progressbar"></div></div><p id="progressText" class="muted">0/4 môn đã ôn</p></div>
+</aside>
+<div>
+<section class="panel"><h2>🎯 Chào mừng bạn đến với cổng ôn thi!</h2><p>Website tổng hợp khu vực ôn tập cho bốn môn: Toán, Ngữ văn, Tiếng Anh và Lịch sử. Chọn môn để xem định hướng học tập, luyện câu hỏi mẫu và tham khảo tài liệu.</p><ul class="check"><li>Giao diện theo phong cách cổng học tập với danh mục rõ ràng</li><li>Trắc nghiệm tương tác có chấm điểm và giải thích</li><li>Sơ đồ tư duy tóm tắt kiến thức theo chủ đề</li><li>Có thể nhúng vào Google Sites hoặc lưu trữ thành website độc lập</li></ul><div class="notice muted">Lưu ý: câu hỏi trong bản mẫu dùng để minh họa. Cần bổ sung và đối chiếu với chương trình, sách giáo khoa và cấu trúc đề thi chính thức của năm dự thi.</div></section>
+<section class="panel" id="subjects"><h2>📚 Chọn môn ôn tập</h2><div class="tiles">
+<div class="tile"><div class="emoji">📐</div><h3>TOÁN</h3><p>Hàm số, đạo hàm, mũ – logarit, xác suất và hình học.</p><button class="subject-button" data-subject="toan" onclick="selectSubject('toan')">Ôn tập Toán</button></div>
+<div class="tile"><div class="emoji">📖</div><h3>NGỮ VĂN</h3><p>Đọc hiểu, nghị luận xã hội, nghị luận văn học.</p><button class="subject-button" data-subject="van" onclick="selectSubject('van')">Ôn tập Văn</button></div>
+<div class="tile"><div class="emoji">🌐</div><h3>TIẾNG ANH</h3><p>Từ vựng, ngữ pháp, đọc hiểu và chức năng giao tiếp.</p><button class="subject-button" data-subject="anh" onclick="selectSubject('anh')">Ôn tập Anh</button></div>
+<div class="tile"><div class="emoji">🏛️</div><h3>LỊCH SỬ</h3><p>Sự kiện, mốc thời gian, nguyên nhân và ý nghĩa.</p><button class="subject-button" data-subject="su" onclick="selectSubject('su')">Ôn tập Sử</button></div>
+</div></section>
+<section class="panel" id="materials"><h2>📘 Tài liệu ôn tập nổi bật</h2><div class="topic-grid">
+<div class="topic"><strong>📝 Đề cương theo chuyên đề</strong><p class="muted">Tóm tắt kiến thức cốt lõi, công thức và từ khóa.</p></div>
+<div class="topic"><strong>🧠 Sơ đồ tư duy</strong><p class="muted">Hệ thống hóa nội dung để ghi nhớ và so sánh.</p></div>
+<div class="topic"><strong>📄 Đề thi thử</strong><p class="muted">Tạo bộ đề luyện tập, chấm điểm và rà soát lỗi.</p></div>
+<div class="topic"><strong>🎥 Video bài giảng</strong><p class="muted">Có thể bổ sung đường dẫn hoặc nhúng video học tập.</p></div>
+</div></section>
+<section class="panel" id="mindmap"><h2>🧠 Sơ đồ tư duy</h2><div class="controls"><label for="mapSubject">Môn:</label><select id="mapSubject" onchange="renderMap()"><option value="toan">Toán</option><option value="van">Ngữ văn</option><option value="anh">Tiếng Anh</option><option value="su">Lịch sử</option></select></div><div id="mapCanvas"></div></section>
+<section class="panel" id="practice"><h2>✍️ Luyện tập nhanh</h2><p class="muted">Chọn môn học và trả lời câu hỏi. Nhấn “Chấm điểm” để xem đáp án cùng lời giải.</p><div class="controls"><label for="quizSubject">Môn học:</label><select id="quizSubject" onchange="renderQuiz()"><option value="toan">Toán</option><option value="van">Ngữ văn</option><option value="anh">Tiếng Anh</option><option value="su">Lịch sử</option></select></div><form id="quizForm"><div id="questions"></div><button type="button" class="btn" onclick="gradeQuiz()">Chấm điểm</button> <button type="reset" class="btn light" onclick="setTimeout(renderQuiz,0)">Làm lại</button><div id="quizResult" class="result" aria-live="polite"></div></form></section>
+
+<section class="panel" id="knowledge">
+<h2>📚 Hệ thống kiến thức trọng tâm của 4 môn</h2>
+<p class="muted">Đây là bản khung ôn tập tổng hợp để bắt đầu học và tự kiểm tra. Mỗi chuyên đề cần được học sâu bằng sách giáo khoa, bài giảng và đề minh họa đúng chương trình/năm thi của bạn.</p>
+<div class="knowledge-grid">
+  <article class="knowledge-card">
+    <h3>📐 TOÁN</h3>
+    <h4>1. Hàm số và giải tích</h4>
+    <ul><li>Tập xác định; giới hạn; tính liên tục và đọc đồ thị.</li><li>Đạo hàm: quy tắc tính, tiếp tuyến, xét đồng biến – nghịch biến, cực trị, giá trị lớn nhất/nhỏ nhất.</li><li>Khảo sát và nhận dạng đồ thị; tiệm cận nếu thuộc chương trình học.</li><li>Nguyên hàm, tích phân; tính diện tích hình phẳng và thể tích khối khi phù hợp dạng bài.</li></ul>
+    <h4>2. Mũ – logarit và phương trình</h4>
+    <ul><li>Quy tắc lũy thừa, điều kiện xác định của logarit, công thức logarit.</li><li>Giải phương trình/bất phương trình mũ – logarit; kiểm tra điều kiện và nghiệm ngoại lai.</li></ul>
+    <h4>3. Hình học, vectơ và tọa độ</h4>
+    <ul><li>Vectơ, tọa độ điểm/vectơ; tích vô hướng và quan hệ vuông góc.</li><li>Đường thẳng, mặt phẳng, khoảng cách và góc trong không gian theo chương trình.</li><li>Thể tích khối; nhận diện dữ kiện, vẽ hình và ghi rõ đơn vị.</li></ul>
+    <h4>4. Xác suất – thống kê</h4>
+    <ul><li>Không gian mẫu, biến cố, xác suất; quy tắc cộng/nhân và xác suất có điều kiện khi được học.</li><li>Đọc bảng, biểu đồ; số trung bình, trung vị, tứ phân vị và độ phân tán theo nội dung sách.</li></ul>
+    <p><b>Cách ôn:</b> lập bảng công thức, làm bài từ nhận biết đến vận dụng, ghi lại lỗi biến đổi và kiểm tra điều kiện.</p>
+  </article>
+  <article class="knowledge-card">
+    <h3>📖 NGỮ VĂN</h3>
+    <h4>1. Đọc hiểu văn bản</h4>
+    <ul><li>Xác định thể loại/phương thức biểu đạt, ngôi kể hoặc chủ thể trữ tình, đề tài và chủ đề.</li><li>Tìm ý chính, thông điệp, mạch cảm xúc, quan hệ giữa chi tiết và nội dung.</li><li>Nhận diện biện pháp tu từ và nêu tác dụng gắn với ngữ cảnh, không chỉ gọi tên.</li><li>Phân tích từ ngữ, hình ảnh, giọng điệu, kết cấu và cách lập luận.</li></ul>
+    <h4>2. Nghị luận xã hội</h4>
+    <ul><li>Mở bài nêu vấn đề; thân bài giải thích, phân tích, đưa lý lẽ và dẫn chứng; bàn luận/mở rộng; kết bài rút ra nhận thức và hành động.</li><li>Dẫn chứng xác thực, tiêu biểu, gần với luận điểm; cần phân tích ý nghĩa của dẫn chứng.</li><li>Trình bày quan điểm rõ ràng, lập luận logic, tránh kể lể và khẳng định chung chung.</li></ul>
+    <h4>3. Nghị luận văn học</h4>
+    <ul><li>Đọc kỹ yêu cầu; xác lập luận đề và các luận điểm theo nội dung cần phân tích.</li><li>Phân tích chi tiết, hình ảnh, ngôn ngữ, kết cấu, giọng điệu và thủ pháp nghệ thuật.</li><li>Kết hợp nội dung với nghệ thuật; trích dẫn chính xác, diễn đạt bằng lời của mình.</li></ul>
+    <h4>4. Kỹ năng làm bài</h4>
+    <ul><li>Phân bổ thời gian; trả lời đúng trọng tâm từng câu; soát lỗi chính tả, câu và liên kết đoạn.</li><li>Không học thuộc bài mẫu máy móc; dùng kiến thức tác phẩm và dẫn chứng phù hợp đề.</li></ul>
+  </article>
+  <article class="knowledge-card">
+    <h3>🌐 TIẾNG ANH</h3>
+    <h4>1. Ngữ pháp nền tảng</h4>
+    <ul><li>Các thì theo ngữ cảnh; hòa hợp chủ ngữ – động từ; dạng động từ và động từ khuyết thiếu.</li><li>Câu bị động; câu điều kiện; câu tường thuật; mệnh đề quan hệ.</li><li>So sánh; danh động từ/động từ nguyên mẫu; liên từ, giới từ, mạo từ và lượng từ.</li><li>Trật tự từ, cấu tạo từ, sự kết hợp từ (collocations) và cụm động từ.</li></ul>
+    <h4>2. Từ vựng và chức năng giao tiếp</h4>
+    <ul><li>Học từ theo chủ đề và cụm từ; ghi nghĩa, từ loại, phát âm và ví dụ.</li><li>Phân biệt từ đồng nghĩa/trái nghĩa theo ngữ cảnh; chọn đáp án dựa vào dấu hiệu ngữ pháp và nghĩa.</li><li>Lời đề nghị, yêu cầu, xin lỗi, cảm ơn, đồng ý/không đồng ý và phản hồi lịch sự.</li></ul>
+    <h4>3. Đọc hiểu và điền từ</h4>
+    <ul><li>Đọc câu hỏi trước, xác định từ khóa; đọc lướt lấy ý chính rồi đọc kỹ tìm thông tin.</li><li>Dựa vào liên kết câu, đại từ thay thế, từ nối và ngữ cảnh để suy luận.</li><li>Phân biệt thông tin được nêu trực tiếp với suy luận; không chọn đáp án chỉ vì trùng từ.</li></ul>
+    <h4>4. Tự luyện</h4>
+    <ul><li>Lập sổ từ vựng và lỗi ngữ pháp; làm đề có bấm giờ rồi phân tích cả đáp án sai.</li><li>Đối chiếu các dạng bài với đề minh họa và yêu cầu thi chính thức của năm dự thi.</li></ul>
+  </article>
+  <article class="knowledge-card">
+    <h3>🏛️ LỊCH SỬ</h3>
+    <h4>1. Cách học một sự kiện</h4>
+    <ul><li>Đặt sự kiện trong bối cảnh thời gian, không gian và tình hình trong nước/quốc tế.</li><li>Phân biệt nguyên nhân sâu xa, nguyên nhân trực tiếp; mục tiêu, lực lượng và diễn biến chính.</li><li>Ghi kết quả, ý nghĩa, tác động, hạn chế và bài học; tránh học mốc năm tách rời sự kiện.</li></ul>
+    <h4>2. Lịch sử Việt Nam hiện đại – các mốc thường gặp</h4>
+    <ul><li>1945: Cách mạng tháng Tám và sự ra đời nước Việt Nam Dân chủ Cộng hòa.</li><li>1946–1954: kháng chiến chống thực dân Pháp; 1954: chiến thắng Điện Biên Phủ và Hiệp định Genève.</li><li>1954–1975: hai miền với nhiệm vụ lịch sử khác nhau; 1975: kết thúc chiến tranh, giải phóng miền Nam và thống nhất đất nước.</li><li>1986: Đại hội VI và đường lối Đổi mới; tiếp tục học các giai đoạn sau theo sách giáo khoa.</li></ul>
+    <h4>3. Lịch sử thế giới và quan hệ quốc tế</h4>
+    <ul><li>Hệ thống hóa các cuộc chiến tranh, trật tự thế giới, tổ chức quốc tế và xu thế hợp tác/xung đột theo từng giai đoạn trong chương trình.</li><li>So sánh sự kiện bằng tiêu chí: bối cảnh, mục tiêu, diễn biến, kết quả, ý nghĩa và ảnh hưởng.</li></ul>
+    <h4>4. Khai thác tư liệu</h4>
+    <ul><li>Đọc kỹ nguồn, thời điểm, tác giả và bối cảnh; tách nội dung tư liệu khỏi nhận định của người làm bài.</li><li>Đối chiếu niên đại, nhân vật và sự kiện; trả lời đúng yêu cầu “nguyên nhân”, “ý nghĩa”, “đặc điểm” hoặc “bài học”.</li></ul>
+  </article>
+</div>
+<div class="feedback"><b>Lưu ý quan trọng:</b> Không có một trang tóm tắt ngắn nào bao quát tuyệt đối toàn bộ kiến thức của cả bốn môn. Hãy dùng mục này làm bản đồ ôn tập, sau đó bổ sung từng bài/chuyên đề theo sách giáo khoa đang học và tài liệu chính thức của năm thi.</div>
+</section>
+<section class="panel" id="sources">
+<h2>🔗 Nguồn tài liệu và địa chỉ tham khảo</h2>
+<p class="muted">Các liên kết dưới đây là nơi tra cứu bổ sung. Ưu tiên chương trình, sách giáo khoa, đề minh họa và hướng dẫn do cơ quan/đơn vị có thẩm quyền công bố; kiểm tra năm cập nhật trước khi sử dụng.</p>
+<div class="source-list">
+  <div class="source-item"><b>📘 Bộ Giáo dục và Đào tạo</b><br><a href="https://moet.gov.vn/" target="_blank" rel="noopener noreferrer">https://moet.gov.vn/</a><br><span class="muted">Thông tin, văn bản, chương trình và thông báo giáo dục chính thức; dùng để đối chiếu yêu cầu thi hiện hành.</span></div>
+  <div class="source-item"><b>📚 Hành trang số – Nhà xuất bản Giáo dục Việt Nam</b><br><a href="https://hanhtrangso.nxbgd.vn/" target="_blank" rel="noopener noreferrer">https://hanhtrangso.nxbgd.vn/</a><br><span class="muted">Tra cứu học liệu số và nội dung hỗ trợ học tập gắn với sách giáo khoa.</span></div>
+  <div class="source-item"><b>📐 Toán – VioEdu</b><br><a href="https://vio.edu.vn/" target="_blank" rel="noopener noreferrer">https://vio.edu.vn/</a><br><span class="muted">Có thể dùng để luyện tập và củng cố kỹ năng; đối chiếu kiến thức với sách giáo khoa và đề chính thức.</span></div>
+  <div class="source-item"><b>📖 Ngữ văn – Hành trang số</b><br><a href="https://hanhtrangso.nxbgd.vn/" target="_blank" rel="noopener noreferrer">https://hanhtrangso.nxbgd.vn/</a><br><span class="muted">Tham khảo văn bản, học liệu và nội dung theo bộ sách đang sử dụng; tự phân tích tác phẩm thay vì chép bài mẫu.</span></div>
+  <div class="source-item"><b>🌐 Tiếng Anh – British Council LearnEnglish</b><br><a href="https://learnenglish.britishcouncil.org/" target="_blank" rel="noopener noreferrer">https://learnenglish.britishcouncil.org/</a><br><span class="muted">Tài liệu bổ trợ ngữ pháp, từ vựng, đọc hiểu và kỹ năng tiếng Anh.</span></div>
+  <div class="source-item"><b>🏛️ Lịch sử – Bảo tàng Lịch sử Quốc gia Việt Nam</b><br><a href="https://baotanglichsu.vn/" target="_blank" rel="noopener noreferrer">https://baotanglichsu.vn/</a><br><span class="muted">Bài viết, tư liệu và thông tin lịch sử để mở rộng hiểu biết; cần đối chiếu niên đại và nội dung với sách giáo khoa.</span></div>
+  <div class="source-item"><b>📝 Cổng thông tin tuyển sinh của Bộ GDĐT</b><br><a href="https://thisinh.thitotnghiepthpt.edu.vn/" target="_blank" rel="noopener noreferrer">https://thisinh.thitotnghiepthpt.edu.vn/</a><br><span class="muted">Theo dõi thông tin liên quan đến kỳ thi khi cổng được mở và có thông báo chính thức.</span></div>
+</div>
+<p class="muted"><small>Ghi chú: các trang luyện tập bổ trợ không thay thế sách giáo khoa hoặc văn bản chính thức. Nếu một liên kết đổi địa chỉ hay nội dung, hãy tìm lại từ trang chủ của đơn vị phát hành.</small></p>
+</section>
+
+<section class="panel" id="plan"><h2>🗓️ Kế hoạch học gợi ý</h2><div class="listline"><b>Buổi 1:</b> Toán – ôn công thức và làm bài vận dụng.</div><div class="listline"><b>Buổi 2:</b> Ngữ văn – luyện đọc hiểu và lập dàn ý.</div><div class="listline"><b>Buổi 3:</b> Tiếng Anh – ôn từ vựng, ngữ pháp và đọc hiểu.</div><div class="listline"><b>Buổi 4:</b> Lịch sử – hệ thống mốc thời gian và luyện tư liệu.</div><div class="listline"><b>Cuối tuần:</b> Làm đề tổng hợp, kiểm tra lỗi sai và ôn lại phần yếu.</div></section>
+</div>
+<aside class="right">
+<div class="panel"><h3>⭐ Chuyên đề trọng tâm</h3><div class="listline">📐 Toán: khảo sát hàm số</div><div class="listline">📖 Văn: nghị luận xã hội</div><div class="listline">🌐 Anh: đọc hiểu</div><div class="listline">🏛️ Sử: Việt Nam hiện đại</div><a class="btn" style="display:block;text-align:center;margin-top:10px" href="#practice">Luyện ngay →</a></div>
+<div class="panel"><h3>📌 Mẹo ôn thi</h3><p class="muted">Học theo phiên ngắn, luyện câu hỏi sau mỗi chủ đề và ghi lại lỗi sai. Không chỉ học thuộc đáp án; hãy hiểu vì sao đáp án đúng.</p></div>
+<div class="panel"><h3>📬 Liên hệ giáo viên</h3><p class="muted">Thêm email giáo viên hoặc liên kết lớp học tại đây khi triển khai.</p></div>
+</aside>
+</main>
+
+<footer>
+  <b>Website ôn thi – Toán • Văn • Anh • Lịch sử</b><br>
+  <small>Website học tập tham khảo. Kiến thức theo 4 môn và nguồn tài liệu nằm trong các mục phía trên; hãy kiểm tra và cập nhật theo chương trình thi hiện hành.</small>
+  <br>
+  <p style="margin:12px auto 0;max-width:850px;font-size:1.05rem;font-weight:bold;color:#ffe7bd">Bạn đã cố gắng hôm nay là đang tiến gần hơn đến mục tiêu ngày mai — hãy tin vào bản thân, kiên trì ôn tập và đừng bỏ cuộc!</p>
+  <hr style="max-width:900px;margin:24px auto 14px;border:0;border-top:1px solid #ffffff55">
+  <section id="thanh-vien-sang-lap" style="max-width:900px;margin:0 auto 18px;padding:0 10px">
+    <h2 style="color:#fff;margin-bottom:8px">👥 Thành viên nhóm thành lập website ôn tập</h2>
+    <p style="margin:0;line-height:1.9">Tạ Khánh Vy <span aria-hidden="true">·</span> Trần Nguyễn Khánh Vy <span aria-hidden="true">·</span> Nguyễn Thị Như Ý <span aria-hidden="true">·</span> Đoàn Quốc Việt</p>
+  </section>
+  <small>© 2026 Nhóm ôn tập · Website ôn thi · Điều khoản &amp; quyền riêng tư</small>
+  <p style="max-width:900px;margin:10px auto 0;color:#e8dce3;font-size:.9rem">Vui lòng không đăng thông tin cá nhân nhạy cảm. Các điểm số mẫu cần được xác nhận trước khi công bố.</p>
+</footer>
+<script>
+const questionBank={
+toan:[
+{q:"Đạo hàm của hàm số f(x)=x² là gì?",o:["x","2x","x²","2"],a:1,e:"Áp dụng quy tắc (xⁿ)' = n·xⁿ⁻¹, ta có (x²)' = 2x."},
+{q:"Giá trị của log₁₀(100) bằng bao nhiêu?",o:["1","2","10","100"],a:1,e:"Vì 10² = 100 nên log₁₀(100)=2."},
+{q:"Nguyên hàm đơn giản của 2x là gì?",o:["x²+C","2x²+C","x+C","2+C"],a:0,e:"Vì (x²)'=2x nên một nguyên hàm của 2x là x²+C."}],
+van:[
+{q:"Trong bài nghị luận xã hội, thao tác nào dùng để làm rõ khái niệm hoặc vấn đề?",o:["Giải thích","Kể chuyện tùy ý","Miêu tả ngoại hình","Đối thoại"],a:0,e:"Thao tác giải thích giúp làm rõ nội dung, ý nghĩa của từ ngữ hoặc vấn đề nghị luận."},
+{q:"Phần mở bài của bài nghị luận thường có nhiệm vụ chính nào?",o:["Khẳng định lại toàn bộ kết luận","Giới thiệu vấn đề cần nghị luận","Liệt kê mọi dẫn chứng","Chép lại đề bài"],a:1,e:"Mở bài dẫn dắt và nêu vấn đề nghị luận để định hướng cho phần thân bài."},
+{q:"Khi sử dụng dẫn chứng trong nghị luận, cần ưu tiên điều gì?",o:["Dẫn chứng không liên quan","Dẫn chứng xác thực, tiêu biểu và phù hợp luận điểm","Dẫn chứng càng dài càng tốt","Không cần giải thích"],a:1,e:"Dẫn chứng cần tiêu biểu, đáng tin cậy và được phân tích để làm sáng tỏ luận điểm."}],
+anh:[
+{q:"Choose the correct option: She _____ to school every day.",o:["go","goes","going","gone"],a:1,e:"Với chủ ngữ ngôi thứ ba số ít ở thì hiện tại đơn, động từ thường thêm -s/-es: goes."},
+{q:"Choose the synonym of “important”.",o:["Significant","Tiny","Unusual","Careless"],a:0,e:"“Significant” có nghĩa là quan trọng, đáng kể; gần nghĩa với “important”."},
+{q:"Choose the correct option: If I had more time, I _____ a new language.",o:["learn","will learn","would learn","learned yesterday"],a:2,e:"Câu điều kiện loại 2: If + quá khứ đơn, would + động từ nguyên mẫu."}],
+su:[
+{q:"Ngày Quốc khánh Việt Nam gắn với sự kiện nào?",o:["Chiến thắng Điện Biên Phủ","Đọc Tuyên ngôn Độc lập ngày 2/9/1945","Đại hội VI năm 1986","Hiệp định Paris năm 1973"],a:1,e:"Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập tại Hà Nội."},
+{q:"Chiến thắng Điện Biên Phủ diễn ra vào năm nào?",o:["1945","1950","1954","1975"],a:2,e:"Chiến dịch Điện Biên Phủ kết thúc thắng lợi ngày 7/5/1954."},
+{q:"Đường lối Đổi mới được đề ra tại Đại hội Đảng lần thứ mấy năm 1986?",o:["IV","V","VI","VII"],a:2,e:"Đại hội đại biểu toàn quốc lần thứ VI của Đảng (12/1986) đề ra đường lối Đổi mới."}]
+};
+const subjectNames={toan:"Toán",van:"Ngữ văn",anh:"Tiếng Anh",su:"Lịch sử"};
+const mindmaps={
+toan:{title:"TOÁN – KIẾN THỨC CỐT LÕI",b:[["Hàm số",["Tập xác định","Đạo hàm","Đồng biến – nghịch biến"]],["Mũ – Logarit",["Quy tắc lũy thừa","Công thức logarit","Phương trình"]],["Xác suất – Hình học",["Biến cố và xác suất","Vectơ, tọa độ","Thể tích và khoảng cách"]]]},
+van:{title:"NGỮ VĂN – KỸ NĂNG LÀM BÀI",b:[["Đọc hiểu",["Xác định thể loại","Nội dung và thông điệp","Biện pháp tu từ"]],["Nghị luận xã hội",["Giải thích vấn đề","Lý lẽ và dẫn chứng","Bài học nhận thức"]],["Nghị luận văn học",["Luận điểm","Phân tích dẫn chứng","Đánh giá nghệ thuật"]]]},
+anh:{title:"TIẾNG ANH – NHÓM KIẾN THỨC",b:[["Ngữ pháp",["Các thì cơ bản","Câu điều kiện","Mệnh đề quan hệ"]],["Từ vựng",["Từ đồng nghĩa – trái nghĩa","Cụm động từ","Kết hợp từ"]],["Kỹ năng",["Đọc hiểu","Điền từ","Giao tiếp và viết câu"]]]},
+su:{title:"LỊCH SỬ – PHÂN TÍCH SỰ KIỆN",b:[["Bối cảnh",["Thời gian và không gian","Tình hình trong nước, quốc tế","Nguyên nhân"]],["Diễn biến",["Mốc thời gian","Lực lượng và chủ thể","Sự kiện tiêu biểu"]],["Kết quả – ý nghĩa",["Kết quả trực tiếp","Tác động lịch sử","Bài học kinh nghiệm"]]]}
+};
+let activeQuestions=[];
+function selectSubject(s){document.getElementById("quizSubject").value=s;document.getElementById("mapSubject").value=s;renderQuiz();renderMap();document.getElementById("practice").scrollIntoView({behavior:"smooth"})}
+function renderMap(){const m=mindmaps[document.getElementById("mapSubject").value];document.getElementById("mapCanvas").innerHTML=`<div class="mind-center">${m.title}</div><div class="branches">${m.b.map(x=>`<div class="branch"><b>${x[0]}</b><ul>${x[1].map(y=>`<li>${y}</li>`).join("")}</ul></div>`).join("")}</div>`}
+function renderQuiz(){const s=document.getElementById("quizSubject").value;activeQuestions=questionBank[s];document.getElementById("quizResult").style.display="none";document.getElementById("questions").innerHTML=activeQuestions.map((q,i)=>`<div class="question"><p>${i+1}. ${q.q}</p>${q.o.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${"ABCD"[j]}. ${o}</label>`).join("")}<div id="feedback${i}"></div></div>`).join("")}
+function gradeQuiz(){let score=0;activeQuestions.forEach((q,i)=>{const chosen=document.querySelector(`input[name="q${i}"]:checked`);const ok=chosen&&Number(chosen.value)===q.a;if(ok)score++;document.getElementById("feedback"+i).innerHTML=`<div class="feedback"><span class="${ok?"correct":"wrong"}">${ok?"Chính xác!":"Chưa chính xác."} Đáp án ${"ABCD"[q.a]}.</span> ${q.e}</div>`});const r=document.getElementById("quizResult");r.style.display="block";r.innerHTML=`<b>Kết quả môn ${subjectNames[document.getElementById("quizSubject").value]}: ${score}/${activeQuestions.length} câu đúng (${Math.round(score/activeQuestions.length*100)}%).</b><p>Đọc phần giải thích để củng cố kiến thức.</p>`}
+const done=new Set();function updateProgress(){document.getElementById("progressbar").style.width=(done.size/4*100)+"%";document.getElementById("progressText").textContent=done.size+"/4 môn đã ôn"}
+document.querySelectorAll(".subject-button").forEach(b=>b.addEventListener("dblclick",()=>{done.add(b.dataset.subject);updateProgress()}));
+renderMap();renderQuiz();updateProgress();
+</script>
+</body>
+</html>
